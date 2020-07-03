@@ -7,7 +7,7 @@
   "height": {
     "type": "number",
     "label": "Alert height",
-    "value": 90
+    "value": 60
   },
   "animationDuration": {
     "type": "number",
@@ -25,7 +25,8 @@
   },
   "alertBackgroundColor": {
     "type": "colorpicker",
-    "label": "Alert background color"
+    "label": "Alert background color",
+    "value": "#000000"
   },
   "announcementBackgroundImage": {
     "type": "image-input",
@@ -33,7 +34,8 @@
   },
   "announcementBackgroundColor": {
     "type": "colorpicker",
-    "label": "Announcement background color"
+    "label": "Announcement background color",
+    "value": "#000000"
   },
   "fontNameTitle": {
     "type": "googleFont",
@@ -43,7 +45,7 @@
   "fontSizeTitle": {
     "type": "number",
     "label": "Title Font size",
-    "value": 32
+    "value": 28
   },
   "fontWeightTitle": {
     "label": "Title Font Weight",
@@ -71,7 +73,7 @@
   "fontSizeSubTitle": {
     "type": "number",
     "label": "SubTitle Font size",
-    "value": 18
+    "value": 16
   },
   "fontWeightSubTitle": {
     "label": "SubTitle Font Weight",
@@ -99,7 +101,7 @@
   "fontSizeAnnouncement": {
     "type": "number",
     "label": "Annoucenment Font size",
-    "value": 32
+    "value": 28
   },
   "fontWeightAnnouncement": {
     "label": "Annoucenment Font Weight",
@@ -127,7 +129,7 @@
   "subscriberText": {
     "type": "text",
     "label": "New subscriber announcement text",
-    "value": "New subscriber"
+    "value": "New subscriber!"
   },
   "tipText": {
     "type": "text",
