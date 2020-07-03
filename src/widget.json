@@ -1,0 +1,157 @@
+{
+  "width": {
+    "type": "number",
+    "label": "Alert Width",
+    "value": 640
+  },
+  "height": {
+    "type": "number",
+    "label": "Alert height",
+    "value": 90
+  },
+  "animationDuration": {
+    "type": "number",
+    "label": "Alert animation duration (seconds)",
+    "value": 1
+  },
+  "announcementDuration": {
+    "type": "number",
+    "label": "Announcement message duration (seconds)",
+    "value": 2
+  },
+  "alertBackgroundImage": {
+    "type": "image-input",
+    "label": "Alert background image"
+  },
+  "alertBackgroundColor": {
+    "type": "colorpicker",
+    "label": "Alert background color"
+  },
+  "announcementBackgroundImage": {
+    "type": "image-input",
+    "label": "Announcement background image"
+  },
+  "announcementBackgroundColor": {
+    "type": "colorpicker",
+    "label": "Announcement background color"
+  },
+  "fontNameTitle": {
+    "type": "googleFont",
+    "label": "Title Font name",
+    "value": "Bungee"
+  },
+  "fontSizeTitle": {
+    "type": "number",
+    "label": "Title Font size",
+    "value": 32
+  },
+  "fontWeightTitle": {
+    "label": "Title Font Weight",
+    "type": "dropdown",
+    "value": "400",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    }
+  },
+  "fontColorTitle": {
+    "type": "colorpicker",
+    "label": "Title Font Color",
+    "value": "rgba(255,255,255,1)"
+  },
+  "fontNameSubTitle": {
+    "type": "googleFont",
+    "label": "SubTitle Font name",
+    "value": "Bungee"
+  },
+  "fontSizeSubTitle": {
+    "type": "number",
+    "label": "SubTitle Font size",
+    "value": 18
+  },
+  "fontWeightSubTitle": {
+    "label": "SubTitle Font Weight",
+    "type": "dropdown",
+    "value": "400",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    }
+  },
+  "fontColorSubTitle": {
+    "type": "colorpicker",
+    "label": "SubTitle Font Color",
+    "value": "rgba(255,255,255,1)"
+  },
+  "fontNameAnnouncement": {
+    "type": "googleFont",
+    "label": "Annoucenment Font name",
+    "value": "Bungee"
+  },
+  "fontSizeAnnouncement": {
+    "type": "number",
+    "label": "Annoucenment Font size",
+    "value": 32
+  },
+  "fontWeightAnnouncement": {
+    "label": "Annoucenment Font Weight",
+    "type": "dropdown",
+    "value": "400",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    }
+  },
+  "fontColorAnnouncement": {
+    "type": "colorpicker",
+    "label": "Annoucenment Font Color",
+    "value": "rgba(255,255,255,1)"
+  },
+  "followerText": {
+    "type": "text",
+    "label": "New follower announcement text",
+    "value": "New follower!"
+  },
+  "subscriberText": {
+    "type": "text",
+    "label": "New subscriber announcement text",
+    "value": "New subscriber"
+  },
+  "tipText": {
+    "type": "text",
+    "label": "Tip announcement text",
+    "value": "Thanks for the tip!"
+  },
+  "cheerText": {
+    "type": "text",
+    "label": "Bits announcement text",
+    "value": "Appreciate the bits!"
+  },
+  "hostText": {
+    "type": "text",
+    "label": "Host announcement text",
+    "value": "Whoa, look who tuned in!"
+  },
+  "raidText": {
+    "type": "text",
+    "label": "Raid announcement text",
+    "value": "A raid is incoming!"
+  },
+  "perkText": {
+    "type": "text",
+    "label": "Perk announcement text",
+    "value": "Perk redeemed!"
+  }
+}

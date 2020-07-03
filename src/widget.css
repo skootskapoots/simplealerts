@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family={fontName}');
+
+*, html, body {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+}
+
+/*
+* Alert container styles 
+*/
+
+#alert-container {
+  align-items: center;
+  background: {alertBackgroundColor};
+  background-image: url('{alertBackgroundImage}');
+  display: flex;
+  height: {height}px;
+  justify-content: space-between;
+  position: relative;
+  width: {width}px;
+}
+
+/*
+* Event styles, which displays event types and user names 
+*/
+
+#event-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.title {
+  color: {{fontColorTitle}};
+  font-family: '{{fontNameTitle}}', sans-serif;
+  font-size: {{fontSizeTitle}}px;
+  font-weight: {{fontWeightTitle}};
+  line-height: {{fontSizeTitle}}px;
+}
+
+.subtitle {
+  color: {{fontColorSubTitle}};
+  font-family: '{{fontNameSubTitle}}', sans-serif;
+  font-size: {{fontSizeSubTitle}}px;
+  font-weight: {{fontWeightSubTitle}};
+  line-height: {{fontSizeSubTitle}}px;
+}
+
+/*
+* Announcement slider
+*/
+
+#announcement-container {
+  align-items: center;
+  background: {announcementBackgroundColor};
+  background-image: url('{announcementBackgroundImage}');
+  display: flex;
+  justify-content: center;
+  height: {height}px;
+  position: absolute;
+  transform: translateY(100%);
+  width: {width}px;
+}
+
+#announcement-message {
+  color: {{fontColorAnnouncement}};
+  font-family: '{{fontNameAnnouncement}}', sans-serif;
+  font-size: {{fontSizeAnnouncement}}px;
+  font-weight: {{fontWeightAnnouncement}};
+  line-height: {{fontSizeAnnouncement}}px;
+}
+
+.slide-in {
+  animation: slide-in {animationDuration}s forwards;
+}
+
+.slide-out {
+  animation: slide-out {animationDuration}s forwards;
+}
+
+/*
+* Keyframes
+*/
+
+@keyframes slide-in {
+  100% { transform: translateY(0%); }
+}
+
+@keyframes slide-out {
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(100%); }
+
+
+
+
+
+
