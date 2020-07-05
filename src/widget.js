@@ -33,7 +33,9 @@ window.addEventListener('onEventReceived', (obj) => {
     const data = obj.detail.event;
     
     if (data.name && data.type) {
-      eventsQueue.push(data);
+      eventsQueue.push({
+        promise: new Promise(resolve => resolve(data))
+      });
     }
   }
 });
@@ -43,21 +45,26 @@ announcementContainer.addEventListener('animationend', () => {
 });
 
 const eventProcess = () => {
-  const data = eventsQueue.shift();
+  let eventValues;
+  const eventPromise = eventsQueue.shift();
 
-  if (data && data.name && data.type) {
-    announcementMessage.innerHTML = eventsMap[data.type];
-    announcementContainer.classList.add('slide');
-
-    delay({announcementDuration} * 1000 / 2)
+  if (eventPromise) {
+    eventPromise.promise
+      .then(item => {
+        eventValues = item;
+        announcementMessage.innerHTML = eventsMap[item.type];
+        announcementContainer.classList.add('slide');
+      })
+      delay({announcementDuration} * 1000 / 2)
       .then(() => {
-        event.innerHTML = data.type;
-        name.innerHTML = data.name;
+        event.innerHTML = eventValues.type;
+        name.innerHTML = eventValues.name;
       })
       .then(() => window.requestAnimationFrame(eventProcess));
-    } else {
-      window.requestAnimationFrame(eventProcess);
-    }
+
+  } else {
+    window.requestAnimationFrame(eventProcess);
+  }
 };
 
 window.requestAnimationFrame(eventProcess);
