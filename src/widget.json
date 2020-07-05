@@ -1,4 +1,9 @@
 {
+  "properties": {
+    "type": "comment",
+    "label": "Container Properties",
+    "value": ""
+  },
   "width": {
     "type": "number",
     "label": "Alert Width",
@@ -7,17 +12,12 @@
   "height": {
     "type": "number",
     "label": "Alert height",
-    "value": 60
+    "value": 90
   },
-  "animationDuration": {
-    "type": "number",
-    "label": "Alert animation duration (seconds)",
-    "value": 1
-  },
-  "announcementDuration": {
-    "type": "number",
-    "label": "Announcement message duration (seconds)",
-    "value": 2
+  "alertBackground": {
+    "type": "comment",
+    "label": "Alert background",
+    "value": ""
   },
   "alertBackgroundImage": {
     "type": "image-input",
@@ -28,6 +28,11 @@
     "label": "Alert background color",
     "value": "#000000"
   },
+  "announcementBackground": {
+    "type": "comment",
+    "label": "Announcement background",
+    "value": ""
+  },
   "announcementBackgroundImage": {
     "type": "image-input",
     "label": "Announcement background image"
@@ -37,6 +42,47 @@
     "label": "Announcement background color",
     "value": "#000000"
   },
+  "announcements": {
+    "type": "comment",
+    "label": "Announcement Animation Options",
+    "value": ""
+  },
+  "announcementDuration": {
+    "type": "number",
+    "label": "Announcement duration (seconds)",
+    "value": 2
+  },
+  "announcementAnimation": {
+    "type": "dropdown",
+    "label": "Announcement animation",
+    "value": "bottom",
+    "options": {
+      "top": "Top to bottom",
+      "bottom": "Bottom to top",
+      "left": "Left to right",
+      "right": "Right to left"
+    }
+  },
+  "announcementEasing": {
+    "type": "dropdown",
+    "label": "Announcement easing function",
+    "value": "ease",
+    "options": {
+      "ease": "Ease",
+      "ease-in": "Ease in",
+      "ease-out": "Ease out",
+      "ease-in-out": "Ease in out",
+      "cubic-bezier(0.7, 0, 0.84, 0)": "Expo in",
+      "cubic-bezier(0.16, 1, 0.3, 1)": "Expo out",
+      "cubic-bezier(0.87, 0, 0.13, 1)": "Expo in out",
+      "linear": "Linear"
+    }
+  },
+  "title": {
+    "type": "comment",
+    "label": "Title Font Selection",
+    "value": ""
+  },
   "fontNameTitle": {
     "type": "googleFont",
     "label": "Title Font name",
@@ -45,7 +91,7 @@
   "fontSizeTitle": {
     "type": "number",
     "label": "Title Font size",
-    "value": 28
+    "value": 32
   },
   "fontWeightTitle": {
     "label": "Title Font Weight",
@@ -65,6 +111,11 @@
     "label": "Title Font Color",
     "value": "rgba(255,255,255,1)"
   },
+  "subtitle": {
+    "type": "comment",
+    "label": "Subtitle Font Selection",
+    "value": ""
+  },
   "fontNameSubTitle": {
     "type": "googleFont",
     "label": "SubTitle Font name",
@@ -73,7 +124,7 @@
   "fontSizeSubTitle": {
     "type": "number",
     "label": "SubTitle Font size",
-    "value": 16
+    "value": 18
   },
   "fontWeightSubTitle": {
     "label": "SubTitle Font Weight",
@@ -93,6 +144,11 @@
     "label": "SubTitle Font Color",
     "value": "rgba(255,255,255,1)"
   },
+  "announcement": {
+    "type": "comment",
+    "label": "Announcement Font Selection",
+    "value": ""
+  },
   "fontNameAnnouncement": {
     "type": "googleFont",
     "label": "Annoucenment Font name",
@@ -101,7 +157,7 @@
   "fontSizeAnnouncement": {
     "type": "number",
     "label": "Annoucenment Font size",
-    "value": 28
+    "value": 32
   },
   "fontWeightAnnouncement": {
     "label": "Annoucenment Font Weight",
@@ -121,6 +177,11 @@
     "label": "Annoucenment Font Color",
     "value": "rgba(255,255,255,1)"
   },
+  "Messages": {
+    "type": "comment",
+    "label": "Announcement Messages",
+    "value": ""
+  },
   "followerText": {
     "type": "text",
     "label": "New follower announcement text",
@@ -129,7 +190,7 @@
   "subscriberText": {
     "type": "text",
     "label": "New subscriber announcement text",
-    "value": "New subscriber!"
+    "value": "New subscriber"
   },
   "tipText": {
     "type": "text",

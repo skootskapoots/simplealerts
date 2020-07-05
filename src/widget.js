@@ -1,3 +1,8 @@
+const announcementContainer = document.getElementById('announcement-container');
+const announcementMessage = document.getElementById('announcement-message');
+const event = document.getElementById('event-type');
+const name = document.getElementById('event-name');
+
 const eventsMap = {
     follower: '{followerText}',
     subscriber: '{subscriberText}',
@@ -7,37 +12,38 @@ const eventsMap = {
     raid: '{raidText}',
     perk: '{perkText}'
   };
+
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
   
-  window.addEventListener('onWidgetLoad', (obj) => {
-    const data = obj['detail']['recents'];
-    const event = document.getElementById('event-type');
-    const name = document.getElementById('event-name');
-    
+window.addEventListener('onWidgetLoad', (obj) => {
+  if (obj && obj.detail && obj.detail.recents) {
+    const data = obj.detail.recents;
+
     if (data.length) {
       const mostRecent = data[0];
-      event.innerHTML = mostRecent['type'];
-      name.innerHTML = mostRecent['name'];
+      event.innerHTML = mostRecent.type;
+      name.innerHTML = mostRecent.name;
     }
-  });
+  }
+});
   
-  window.addEventListener('onEventReceived', (obj) => {
-    const data = obj['detail']['event'];
+window.addEventListener('onEventReceived', (obj) => {
+  if (obj && obj.detail && obj.detail.event) {
+    const data = obj.detail.event;
     
-    if (data["name"] && data['type']) {
-      const announcementContainer = document.getElementById('announcement-container');
-      const announcementMessage = document.getElementById('announcement-message');
-      const event = document.getElementById('event-type');
-      const name = document.getElementById('event-name');
+    if (data.name && data.type) {
+      announcementMessage.innerHTML = eventsMap[data.type];
+      announcementContainer.classList.add('slide');
       
-      announcementMessage.innerHTML = eventsMap[data['type']];
-      announcementContainer.classList.remove('slide-out');
-      announcementContainer.classList.add('slide-in');
-      
-      setTimeout(() => {
-        announcementContainer.classList.remove('slide-in');
-        announcementContainer.classList.add('slide-out');
-        event.innerHTML = data['type'];
-        name.innerHTML = data['name'];
-      }, {announcementDuration} * 1000)
+      delay({announcementDuration} * 1000 / 2)
+        .then(() => {
+          event.innerHTML = data.type;
+          name.innerHTML = data.name;
+        });
     }
-  });
+  }
+});
+
+announcementContainer.addEventListener('animationend', () => {
+  announcementContainer.classList.remove('slide');
+});
