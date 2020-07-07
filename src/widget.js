@@ -3,6 +3,7 @@ const announcementMessage = document.getElementById('announcement-message');
 const event = document.getElementById('event-type');
 const name = document.getElementById('event-name');
 
+let isRunning = false;
 const eventsQueue = [];
 const eventsMap = {
     follower: '{followerText}',
@@ -14,16 +15,19 @@ const eventsMap = {
     perk: '{perkText}'
   };
 
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-  
 window.addEventListener('onWidgetLoad', (obj) => {
   if (obj && obj.detail && obj.detail.recents) {
     const data = obj.detail.recents;
 
     if (data.length) {
       const mostRecent = data[0];
-      event.innerHTML = mostRecent.type;
-      name.innerHTML = mostRecent.name;
+      if (mostRecent.bulkGifted) {
+        event.innerHTML = `Gifted ${mostRecent.amount} subs`;
+        name.innerHTML = mostRecent.sender;
+      } else {
+        event.innerHTML = mostRecent.type;
+        name.innerHTML = mostRecent.name;
+      }
     }
   }
 });
@@ -32,36 +36,42 @@ window.addEventListener('onEventReceived', (obj) => {
   if (obj && obj.detail && obj.detail.event) {
     const data = obj.detail.event;
     
-    if (data.name && data.type) {
-      eventsQueue.push({
-        promise: new Promise(resolve => resolve(data))
-      });
+    if (data.name && data.type && !data.isCommunityGift) {
+      eventsQueue.push(new Promise(resolve => resolve(data)));
     }
   }
 });
 
 announcementContainer.addEventListener('animationend', () => {
   announcementContainer.classList.remove('slide');
+  isRunning = false;
 });
 
 const eventProcess = () => {
-  let eventValues;
-  const eventPromise = eventsQueue.shift();
+  if (!isRunning && eventsQueue.length) {
+    isRunning = true;
+    let eventValues;
+    const eventPromise = eventsQueue.shift();
 
-  if (eventPromise) {
-    eventPromise.promise
-      .then(item => {
+    eventPromise
+      .then((item) => {
         eventValues = item;
         announcementMessage.innerHTML = eventsMap[item.type];
         announcementContainer.classList.add('slide');
       })
-      delay({announcementDuration} * 1000 / 2)
+      .then(() => new Promise(resolve => setTimeout(resolve, {alertDuration} * 1000)))
       .then(() => {
-        event.innerHTML = eventValues.type;
-        name.innerHTML = eventValues.name;
+        if (eventValues.bulkGifted) {
+          event.innerHTML = `Gifted ${eventValues.amount} subs`;
+          name.innerHTML = eventValues.sender;
+        } else {
+          event.innerHTML = eventValues.type;
+          name.innerHTML = eventValues.name;
+        }
       })
-      .then(() => window.requestAnimationFrame(eventProcess));
-
+      .then(() => new Promise(resolve => setTimeout(resolve, {alertDuration} * 1000)))
+      .catch((error) => console.log('Promise error:', error))
+      .finally(() => window.requestAnimationFrame(eventProcess));
   } else {
     window.requestAnimationFrame(eventProcess);
   }
