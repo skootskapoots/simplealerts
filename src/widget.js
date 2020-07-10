@@ -1,3 +1,5 @@
+const audioContainer = document.getElementById('audio-container');
+const audioSource = document.getElementById('audio-source');
 const announcementContainer = document.getElementById('announcement-container');
 const announcementMessage = document.getElementById('announcement-message');
 const event = document.getElementById('event-type');
@@ -49,7 +51,9 @@ announcementContainer.addEventListener('animationend', () => {
 
 const eventProcess = () => {
   if (!isRunning && eventsQueue.length) {
+    audioContainer.load();
     isRunning = true;
+    
     let eventValues;
     const eventPromise = eventsQueue.shift();
 
@@ -58,6 +62,7 @@ const eventProcess = () => {
         eventValues = item;
         announcementMessage.innerHTML = eventsMap[item.type];
         announcementContainer.classList.add('slide');
+        audioContainer.play();
       })
       .then(() => new Promise(resolve => setTimeout(resolve, {alertDuration} * 1000)))
       .then(() => {

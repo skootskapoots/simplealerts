@@ -40,7 +40,16 @@
   "announcementBackgroundColor": {
     "type": "colorpicker",
     "label": "Announcement background color",
-    "value": "#000000"
+    "value": "#212121"
+  },
+  "alertSound": {
+  	"type": "comment",
+    "label": "Announcement Sound",
+    "value": ""
+  },
+  "announcementAudio": {
+    "type": "sound-input",
+    "label": "Announcement Audio"
   },
   "announcements": {
     "type": "comment",
