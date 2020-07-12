@@ -59,7 +59,7 @@ Link References
 -->
 
 [repo]: https://github.com/skootskapoots/simplealerts/releases/latest "Latest release"
-[license]: https://github.com/skootskapoots/simplealerts/license.md "Our license"
+[license]: https://github.com/skootskapoots/simplealerts/LICENSE.md "Our license"
 [issues]: https://github.com/skootskapoots/simplealerts/issues "View or log an issue"
 [prs]: https://github.com/skootskapoots/simplealerts/pulls "Feel free to submit a PR!"
 [twitch-link]: http://www.twitch.com/skootskapoots "Check me out on Twitch!"
