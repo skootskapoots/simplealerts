@@ -17,6 +17,15 @@
 
 I'm just a full-time software engineer by day, and hobby streamer and content creator at night. I'd love to someday pursue my hobbies as a profession, but I'm in no rush where I am today. I stream a couple times a week, and have other projects in the pipe I work on. That said, you can support any of my content channels with likes or follows to let me know you dig what I'm doing. It makes what I do feel that much better!
 
+## Features
+
+- **Sizing:** You determine the height and width of the alert bar.
+- **Backgrounds:** You can chose a color or image for he background of the alert bar and announcement slider.
+- **Audio:** Chose an audio clip that triggers on a received alert event.
+- **Animation:** The announcement slider is in your control, direction, easing, and timing!
+- **Fonts:** The title, subtitle, and announcement text can have their own fonts and sizes.
+- **Subtitles:** Above the viewers name, you can define custom text for event type of event (follow, sub, cheer, whatever).
+
 ## Installation
 
 Installation is a breeze, I promise! Someday, you may find this in the `Widget` area of the `Themes Gallery` in StreamElements. Until then, follow this easy steps to get going:
@@ -36,15 +45,6 @@ Installation is a breeze, I promise! Someday, you may find this in the `Widget` 
 8. Use the new menu fields on the left hand side to customize your new simple alert bar!
 9. Make sure your layer `Position, size, style` layer tab has a height and width that matches the widget height and width that you entered.
 10. Add their overlay as a browser source within OBS or whatever software you use.
-
-## Features
-
-- **Sizing:** You determine the height and width of the alert bar.
-- **Backgrounds:** You can chose a color or image for he background of the alert bar and announcement slider.
-- **Audio:** Chose an audio clip that triggers on a received alert event.
-- **Animation:** The announcement slider is in your control, direction, easing, and timing!
-- **Fonts:** The title, subtitle, and announcement text can have their own fonts and sizes.
-- **Subtitles:** Above the viewers name, you can define custom text for event type of event (follow, sub, cheer, whatever).
 
 ## Caveats
 
