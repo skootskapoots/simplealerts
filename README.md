@@ -28,7 +28,7 @@ I'm just a full-time software engineer by day, and hobby streamer and content cr
 
 ## Installation
 
-Installation is a breeze, I promise! Someday, you may find this in the `Widget` area of the `Themes Gallery` in StreamElements. Until then, follow this easy steps to get going:
+Installation is a breeze, I promise! Someday, you may find this in the `Widget` area of the `Themes Gallery` in StreamElements. Until then, follow these easy steps to get going:
 
 1. Head over to the [My Overlays](https://streamelements.com/dashboard/overlays) section of StreamElements.
 2. Either create a new overlay or edit an existing one you'd like to add this widget to.
