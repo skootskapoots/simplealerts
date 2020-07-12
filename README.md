@@ -64,8 +64,8 @@ Link References
 [prs]: https://github.com/skootskapoots/simplealerts/pulls "Feel free to submit a PR!"
 [twitch-link]: http://www.twitch.com/skootskapoots "Check me out on Twitch!"
 [twitter-link]: http://www.twitter.com/skootskapoots "I post on Twitter time to time"
-[youtube-link]: http://www.youtube.com/skootskapoots "For more programming and other content"
-[instagram-link]: http://www.twitch.com/skootskapoots "I am also a human with a human life!"
+[youtube-link]: https://www.youtube.com/channel/UCHkyBxDsnIxB-r3YUJg9qSQ "For more programming and other content"
+[instagram-link]: http://www.instagram.com/skootskapoots "I am also a human with a human life!"
 
 <!--
 Badge References
