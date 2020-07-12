@@ -26,7 +26,7 @@ const announcementMap = {
 const updateFields = (eventValues) => {
   /**
    * Certain event types require certain plain language in order to make sense and make the viewer feel
-   * like that are a part of the community at large. Of course, there are two cases where things are a
+   * like they are a part of the community at large. Of course, there are two cases where things are a
    * little weird, both concerning gifted subs. They are handled in their own statements to make it easier
    * to fuss about.
    */

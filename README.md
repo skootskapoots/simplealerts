@@ -78,4 +78,4 @@ Badge References
 [twitter-badge]: https://img.shields.io/badge/skootskapoots-twitter-00aced.svg?style=for-the-badge&logo=twitter&labelColor=24275d
 [youtube-badge]: https://img.shields.io/badge/skootskapoots-youtube-c4302b.svg?style=for-the-badge&logo=youtube&labelColor=24275d
 [instagram-badge]: https://img.shields.io/badge/skootskapoots-instagram-3f729b.svg?style=for-the-badge&logo=instagram&labelColor=24275d
-[license-badge]: https://img.shields.io/github/license/skootskapoots/simplealerts?color=A31F34&style=for-the-badge
+[license-badge]: https://img.shields.io/github/license/skootskapoots/simplealerts?color=A31F34&style=for-the-badge&labelColor=24275d
