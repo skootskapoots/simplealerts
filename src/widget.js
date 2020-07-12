@@ -124,6 +124,7 @@ const eventLoop = () => {
    */
   if (!isRunning && eventsQueue.length) {
     audioContainer.load();
+    audioContainer.volume = {announcementVolume} / 100;
     isRunning = true;
     
     let eventValues;

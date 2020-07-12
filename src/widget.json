@@ -49,7 +49,14 @@
   },
   "announcementAudio": {
     "type": "sound-input",
-    "label": "Announcement Audio"
+    "label": "Announcement audio"
+  },
+  "announcementVolume": {
+    "type": "slider",
+    "label": "Announcement audio volume",
+    "min": 0,
+    "max": 100,
+    "value": 50
   },
   "announcements": {
     "type": "comment",
@@ -186,7 +193,7 @@
     "label": "Annoucenment Font Color",
     "value": "rgba(255,255,255,1)"
   },
-  "Messages": {
+  "messages": {
     "type": "comment",
     "label": "Announcement Messages",
     "value": ""
