@@ -20,7 +20,7 @@ I'm just a full-time software engineer by day, and hobby streamer and content cr
 ## Features
 
 - **Sizing:** You determine the height and width of the alert bar.
-- **Backgrounds:** You can chose a color or image for he background of the alert bar and announcement slider.
+- **Backgrounds:** You can choose a color or image for the background of the alert bar and announcement slider.
 - **Audio:** Chose an audio clip that triggers on a received alert event.
 - **Animation:** The announcement slider is in your control, direction, easing, and timing!
 - **Fonts:** The title, subtitle, and announcement text can have their own fonts and sizes.
@@ -38,17 +38,17 @@ Installation is a breeze, I promise! Someday, you may find this in the `Widget` 
 <img alt="Custom widget location" src="assets/step4.png"></details>
 5. Select the new layer that was just created, you can even rename it something handy. <details>
 <img alt="New widget layer" src="assets/step5.png"></details>
-6. Expaning the layer, select `Settings`. <details>
+6. Expanding the layer, select `Settings`. <details>
 <img alt="New widget settings" src="assets/step6.png"></details>
 7. Hit `Open Editor` and copy/paste the [widget code](https://github.com/skootskapoots/simplealerts/tree/master/src) into the appropriate tabs and hit `Done`. <details>
 <img alt="Paste in code" src="assets/step7.png"></details>
-8. Use the new menu fields on the left hand side to customize your new simple alert bar!
+8. Use the new menu fields on the left-hand side to customize your new simple alert bar!
 9. Make sure your layer `Position, size, style` layer tab has a height and width that matches the widget height and width that you entered.
 10. Add their overlay as a browser source within OBS or whatever software you use.
 
 ## Caveats
 
-While you have a fairly wide range of control of this widget, be aware that some values just won't work. Font sizes can pretty easily get out of hand, especially with the stacked nature of the title and subtitle. Fast animation speeds could also pose an issue with the `animationend` event not firing on the element. Make sure you test your configurations before going live!
+While you have a fairly wide range of control of this widget, be aware some values just won't work. Font sizes can pretty easily get out of hand, especially with the stacked nature of the title and subtitle. Fast animation speeds could also pose an issue with the `animationend` event not firing on the element. Make sure you test your configurations before going live!
 
 ## Thanks!
 
